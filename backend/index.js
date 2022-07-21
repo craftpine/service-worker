@@ -1,3 +1,7 @@
+const PUBLIC_KEY =
+  "BO9OtWBl9CKSy9_5LEMN6t1onvIW-p0fBX5iC7BU23dhTlHCdl3y6JQHoq7k_U6Paulsjjto4Tku0BHaA-VmC68";
+const PRIVATE_KEY = "AiqeIuOkkjbcsNDGp0tc21EhpLCrmHQlayuScpc1MNs";
+
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
@@ -20,10 +24,6 @@ app.post("/save-subscription", async (req, res) => {
   await saveToDatabase(subscription); //Method to save the subscription to Database
   res.json({ message: "success" });
 });
-
-const PUBLIC_KEY =
-  "BO9OtWBl9CKSy9_5LEMN6t1onvIW-p0fBX5iC7BU23dhTlHCdl3y6JQHoq7k_U6Paulsjjto4Tku0BHaA-VmC68";
-const PRIVATE_KEY = "AiqeIuOkkjbcsNDGp0tc21EhpLCrmHQlayuScpc1MNs";
 
 const vapidKeys = {
   publicKey: PUBLIC_KEY,

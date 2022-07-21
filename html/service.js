@@ -1,6 +1,5 @@
-// urlB64ToUint8Array is a magic function that will encode the base64 public key
-// to Array buffer which is needed by the subscription option
-
+// replace your key here
+// web-push generate-vapid-keys
 const PUBLIC_KEY =
   "BO9OtWBl9CKSy9_5LEMN6t1onvIW-p0fBX5iC7BU23dhTlHCdl3y6JQHoq7k_U6Paulsjjto4Tku0BHaA-VmC68";
 const PRIVATE_KEY = "AiqeIuOkkjbcsNDGp0tc21EhpLCrmHQlayuScpc1MNs";
@@ -38,7 +37,7 @@ self.addEventListener("activate", async () => {
     const subscription = await self.registration.pushManager.subscribe(options);
     console.log({ subscription });
     const response = await saveSubscription(subscription);
-    console.log({ response });
+    // console.log({ response });
   } catch (err) {
     console.log("Error", err);
   }
