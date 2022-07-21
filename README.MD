@@ -6,3 +6,6 @@
 
 # html
 - yarn add http-server -g
+
+# vapid keys
+- web-push generate-vapid-keys
